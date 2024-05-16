@@ -1,0 +1,23 @@
+ 1. Clone the repository and run it localy on youe IDE.
+ 2. In your terminal cd to the root folder and run the command.***** composer install
+ 3. in the terminal run npm install
+ 4. start up your xampp and start the apache and mysql 
+ 5. click on admin to access the myPHP admin in the browser
+ 6. in the admin create a database with a name of your liking and save it
+ 7. in the terminal run the command ***** cp .env.example .env (this will create a copy of the .env file)
+ 8. navigate to the .env file and set the database specifications name the name of the database.
+ ... in the terminal run the command ***** php artisan key:generate
+ 9. in the terminal run the command ***** php artisan migrate 
+ 10.in the terminal run the command ***** php artisan hash:user-passwords
+ 11. in the terminal run the command ***** php artisan serve
+ 12. follow the link to the signin page
+ 13. navigate to the database in MyPhp admin and create a new user whose credentials will be used to signin
+ 14. check to see if the password is hashed and if its not come back to the terminal and stop it. run the commandd
+ **** php artisan hash:user-passwords
+ 15. start the server again and refresh the my php admin till the password is harsed 
+ 16. in my php admin navigate to the timelog table and crate a new column user_id
+ 17. and log in the time in and out
+ 
+ 
+
+
