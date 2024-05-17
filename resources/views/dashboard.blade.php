@@ -12,8 +12,9 @@
         </div>
         <div class="flex items-center">
             <a href="{{ route('report')}}" class="mr-4">Report</a>
-            <a href="" class="mr-4">Users</a>
-            <a href="#">Log Out</a>
+            <a href="{{ route('user')}}" class="mr-4">Users</a>
+            <a href="{{ route('logout') }}">Log Out</a>
+
         </div>
         </div>
         <!-- Rest of your dashboard content -->

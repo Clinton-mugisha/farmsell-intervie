@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LoggingController;
 use App\Http\Controllers\DisplayTimeLogsController;
@@ -34,7 +35,11 @@ Route::post('/time-out', [LoggingController::class, 'logTimeOut'])->name('timeOu
 
 Route::get('/report',[DisplayTimeLogsController::class, 'displayTimeLogs'])->middleware('auth')->name('report');
 
-Route::get('/user-management', function () {
-    // Add your user management logic here
-    return view('user-management');
-});
+Route::get('/user', [usercontroller::class, 'showLoginForm'])->name('user');
+Route::get('/user', [UserController::class, 'showUsers'])->name('user');
+Route::get('/user/edit/{id}', [UserController::class, 'editUser'])->name('editUser');
+Route::post('/user/update/{id}', [UserController::class, 'updateUser'])->name('updateUser');
+Route::get('/user/delete/{id}', [UserController::class, 'deleteUser'])->name('deleteUser');
+Route::get('/user/add', [UserController::class, 'addUser'])->name('addUser');
+Route::post('/user/store', [UserController::class, 'storeUser'])->name('storeUser');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');

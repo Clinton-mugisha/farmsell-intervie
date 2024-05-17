@@ -7,13 +7,14 @@
 <body>
     <div class="navbar bg-green-400 py-2 px-4 flex justify-between items-center">
         <div class="flex flex-col">
-            <span class="text-xl font-bold">Clocking</span>
+            <span class="text-xl font-bold"><a href="{{ route('dashboard')}}" style="text-decoration: none">Clocking</a></span>
             <span class="ml-2">{{ auth()->user()->email }}</span>
         </div>
         <div class="flex items-center">
             <a href="{{ route('report')}}" class="mr-4">Report</a>
-            <a href="#" class="mr-4">Users</a>
-            <a href="#">Log Out</a>
+            <a href="{{ route('user')}}" class="mr-4">Users</a>
+            <a href="{{ route('logout') }}">Log Out</a>
+
         </div>
     </div>
     <div class="flex">

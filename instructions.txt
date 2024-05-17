@@ -17,6 +17,9 @@
  15. start the server again and refresh the my php admin till the password is harsed 
  16. in my php admin navigate to the timelog table and crate a new column user_id
  17. and log in the time in and out
+ 18. when you click on clockinfg you are redirected to the dashboard
+ 19. when you click on report you see the timelog reports.
+ 20. when you click users you see the available users in the database and you are able to edit and delete them
  
  
 
